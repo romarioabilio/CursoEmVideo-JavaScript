@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Nome</title>
+
+    <style>
+    body{
+        background-color: black;
+        color: red;
+        font: normal 25pt Arial
+    }
+        
+    </style>
+</head>
+<body>
+
+
+    <script>
+        var nome = window.prompt('Qual seu nome ?')
+        var idade = Number(window.prompt('Qual a sua idade ?'))
+        var anosDeFaculdade = Number(window.prompt('Quantos anos de curso ?'))
+        var media = idade * anosDeFaculdade
+        var valor = Number(window.prompt('Salário : '))
+        document.write(`Olá <strong>${nome}</strong> seu nome tem ${nome.length} letras </br>`)
+        document.write(`Seu nome com todas letras maiusculas é : <strong>${nome.toUpperCase()}</strong></br>`)
+        document.write(`Seu nome com todas letras minusculas é : <strong>${nome.toLowerCase()}</strong></br>`)
+        document.write(`Sua idade é : <strong>${idade} anos</strong></br>`)
+        document.write(`TOTAL : ${media}</br>`)
+        document.write(valor.toLocaleString('pt-BR',{style: 'currency' , currency: 'BRL'}))
+        
+    </script>
+</body>
+</html> 

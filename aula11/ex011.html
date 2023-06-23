@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE DE NACIONALIDADE</title>
+</head>
+<body>
+
+Digite Seu País de Origem: <input type="text" name="pais" id="pais">
+<input type="button" value="Testar nacionalidade " onclick="testar()">
+<br>
+<br>
+<div id="res">
+
+</div>
+  
+    <script>
+        
+        function testar(){
+            var nac = window.document.getElementById('pais')
+            var nacString =String(nac.value) 
+            var nacMaiuscula= nacString.toUpperCase()
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `Você nasceu no(a) <strong>${nacMaiuscula}</strong>`
+            if(nacMaiuscula == 'BRASIL' || nacMaiuscula =='BR'){
+                res.innerHTML += `<p>Você é Brasileiro(a) !</p>`
+            }else{
+                res.innerHTML += `<p>Você é Estrangeiro(a)</p>`
+                res.innerHTML += `<p>Seja Bem-Vindo(a) ! !</p>`
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

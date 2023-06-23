@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudando DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(127, 127, 252);
+            color: white;
+            font : normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1 class="t1" >Título</h1>
+    <P>Primeiro <strong>Parágrafo</strong></P>
+    <p name="p2" >Segundo <strong>Parágrafo</strong></p>
+    <div id="msg" >Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByName('p2')[0]
+        var divi = window.document.getElementById('msg')
+        var titulo = window.document.querySelector('h1.t1')
+        corpo.style.backgroundColor = 'white'
+        p1.style.color = 'red'
+        p1.style.background = 'white'
+        p2.style.color = 'red'
+        p2.style.background = 'white'
+        divi.style.color = 'red'
+        divi.style.background = 'white'
+        divi.innerText = 'Contato : (81)9 9119-5192'
+        p1.innerText = 'Romário Abílio de França'
+        p2.innerText = 'Bacharelado Ciência da Computação'
+        titulo.innerText = 'UFAPE'
+        titulo.style.color = 'black'
+        titulo.style.background = "red"
+
+        
+    </script>
+</body>
+</html>
